@@ -1,0 +1,21 @@
+[package]
+name = "rust-crashcourse"
+version = "0.1.0"
+authors = ["Austin Jones <austin.jones@threatx.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+
+# these are compile-time dependencies, that are built into your crate.
+[dependencies]
+anyhow = "1.0"
+thiserror = "1.0"
+serde = { version = "1.0", optional = true }
+
+[dev-dependencies]
+# any test-only dependencies can go here
+
+[features]
+default-features = []
+serialization = ["serde"]
